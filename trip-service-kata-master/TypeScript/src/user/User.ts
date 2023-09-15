@@ -1,8 +1,9 @@
-import Trip from "../trip/Trip";
+import Trip from "../core/entity/Trip";
 
 export default class User {
     private trips: Trip[] = [];
     private friends: User[] = [];
+
 
     public getFriends(): User[] {
         return this.friends;
@@ -14,6 +15,10 @@ export default class User {
 
     public addTrip(trip: Trip): void {
         this.trips.push(trip);
+    }
+
+    public isFriendWith(someone: User): boolean {
+        return this.getFriends().some((oneFriend) => oneFriend === someone);
     }
 
     public getTrips(): Trip[] {

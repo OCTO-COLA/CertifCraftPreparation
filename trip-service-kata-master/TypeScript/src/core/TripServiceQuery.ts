@@ -3,4 +3,5 @@ import User from "../user/User";
 
 export class TripServiceQuery implements IUseCaseQuery {
     public user: User;
+    public friend?: User;
 }

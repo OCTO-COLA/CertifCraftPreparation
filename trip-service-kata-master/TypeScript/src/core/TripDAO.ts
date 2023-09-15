@@ -1,6 +1,6 @@
 import CollaboratorCallException from "../exception/CollaboratorCallException";
 import User from "../user/User";
-import Trip from "./Trip";
+import Trip from "./entity/Trip";
 
 export default class TripDAO {
     public static findTripsByUser(user: User): Trip[] {
